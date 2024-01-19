@@ -3,15 +3,8 @@ import { makeStyles } from "../styles.ts";
 export type CategoryPipProps = {
   variant: "news" | "reviews" | "featured" | undefined;
 };
-function handlePipStyle(props: CategoryPipProps) {
-  if (props.variant == "news") {
-    return "orange";
-  } else if (props.variant == "reviews") {
-    return "blue";
-  } else return "white";
-}
 
-const useStyles = makeStyles((props: CategoryPipProps) => ({
+const useStyles = makeStyles(() => ({
   outerPip: {
     borderRadius: 100,
     height: "1rem",
@@ -25,7 +18,7 @@ const useStyles = makeStyles((props: CategoryPipProps) => ({
 }));
 export default function CategoryPip(props: CategoryPipProps) {
   const { variant } = props;
-  const { classes } = useStyles(props);
+  const { classes } = useStyles();
 
   return <div className={classes.outerPip}>{variant}</div>;
 }

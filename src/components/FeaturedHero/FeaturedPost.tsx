@@ -41,7 +41,7 @@ const useStyles = makeStyles((props: FeaturedPostProps) => ({
   },
 }));
 export default function FeaturedPost(props: FeaturedPostProps) {
-  const { timeStamp, title, body, author, imgUrl, postType } = props;
+  // const { timeStamp, title, body, author, imgUrl, postType } = props;
   const { classes } = useStyles(props);
 
   return (
@@ -50,7 +50,7 @@ export default function FeaturedPost(props: FeaturedPostProps) {
         <div className={classes.imgUrl}></div>
       </div>
       <div className={classes.postDescriptionContainer}>
-        <CategoryPip variant={props.postType} />
+        <CategoryPip variant={props.postType as any} />
         <div className={classes.featuredTitle}>{props.title}</div>
         <div>
           {props.author} | {props.timeStamp}
