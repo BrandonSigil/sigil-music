@@ -18,7 +18,7 @@ const blogPosts = [
     title: "Big Thief strikes again",
     body: "Well well well, look what we have here.",
     author: "Brandon Wirth",
-    imgUrl: `https://source.unsplash.com/random/?technology+${Math.random(1)}`,
+    imgUrl: `https://source.unsplash.com/random/?technology+${Math.random()}`,
   },
   {
     timeStamp: "1-23-2020 12:15",
