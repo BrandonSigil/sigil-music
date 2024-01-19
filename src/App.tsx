@@ -1,13 +1,28 @@
-import { useState } from 'react'
-import './App.css'
-
+import "./App.sass";
+import HeaderNav from "./components/HeaderNav/HeaderNav.tsx";
+import FeaturedPostGrid from "./components/FeaturedHero/FeaturedPostGrid.tsx";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <HeaderNav
+        borderRadius={5}
+        padding={5}
+        justify="space-between"
+        dropShadow
+      />
+      <div
+        style={{
+          fontSize: "6rem",
+          fontWeight: 750,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        HELIUM TEST
+      </div>
+      <FeaturedPostGrid />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

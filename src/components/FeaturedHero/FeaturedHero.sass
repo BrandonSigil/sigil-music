@@ -1,0 +1,17 @@
+@use 'src/palette'
+
+.innerPhoto
+  border-radius: 15px
+  height: 100%
+  max-height: 400px
+  background-position: center
+  background-repeat: no-repeat
+  background-origin: content-box
+  background-size: cover
+  -webkit-transition: transform 150ms ease-in-out
+  background-color: palette.$bg-dark
+
+
+  &.innerPhoto:hover
+    -webkit-transition: transform 150ms ease-in-out
+    transform: scale(1.015)
